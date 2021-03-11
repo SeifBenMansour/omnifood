@@ -1,0 +1,131 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Basic setup */
+/* orange #e67e22 */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  /* text-rendering:optimizeLegibility ;make fonts rendered in a perfect way
+  The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
+  */
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Reusable components */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+.row {
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+}
+/* -------Headings------ */
+h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 240%;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+/* -------Buttons------ */
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  border-radius: 200px;
+}
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: white;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  background-color: #cf6d17;
+  border: 1px solid #cf6d17;
+  color: white;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.699)),
+    url("../img/hero.jpg");
+  height: 100vh;
+  background-size: cover;
+  /* the image is zoomed in so in order to make fit in the 
+  screen we make the background-size:cover; */
+  background-position: center;
+  position: relative;
+}
+.hero-text-box {
+  /* so in order to position the box to the center 
+  we need to make its posiotion absolute and then 
+  top and left 50% but it's not going to be centered 
+  so to fix it we use the transform : translate(-50%,-50%);
+  -50% of it's height and width
+  */
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 60px;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: white;
+  padding: 8px 0;
+  text-decoration: none;
+  /* to delete any kind of decoration lilke the underline */
+  text-transform: uppercase;
+  /* transform text to uppercase */
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #e67e22;
+}
