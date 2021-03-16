@@ -26,15 +26,60 @@ html {
   max-width: 1140px;
   margin: 0 auto 0 auto;
 }
+section {
+  padding: 80px 0;
+  /* here we used the padding instead of margin because we want to add a background image later 
+  if we use the margin there will be white space between this section and the header and we don't want that 
+  so instead we use the padding and it will fix this problem
+  also when putting a background image the margin is not included so we get white space between the section and the 
+  header 
+  */
+}
+.box {
+  padding: 1%;
+  /* padding percentage value is relative to the width of the containing block
+  in this case 1% of the width of div row element
+  */
+}
 /* -------Headings------ */
-h1 {
-  margin: 0;
-  color: #fff;
-  font-size: 240%;
+h1,
+h2 {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
   word-spacing: 4px;
+}
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+h2:after {
+  display: block;
+  height: 2px;
+  width: 100px;
+  background-color: #e67e22;
+  content: "";
+  /* so :after is used to insert an element after the mentioned element 
+  and as we know elements in html are basically boxes so we mentioned here 
+  display : block // means it takes the whole width of the parent element
+  and in order for theat line to appear we need to add content property 
+  */
+  margin: 0 auto;
+  margin-top: 30px;
+}
+/* -------Paragraphes------ */
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
 }
 /* -------Buttons------ */
 .btn:link,
@@ -111,6 +156,10 @@ header {
 }
 .main-nav li {
   display: inline-block;
+  /* display inline-block vs inline 
+  the major difference that in inline elements we can not change the height/width nor the padding/margin-top/bottom
+  the inline block we can do that  and this is why we used it here in the nav
+  */
   margin-left: 40px;
 }
 .main-nav li a:link,
